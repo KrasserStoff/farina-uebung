@@ -31,6 +31,7 @@ Pushe deine finale Lösung in GitHub
 ### Hints
 
 - Nutze `useState()` um die Daten zu aktualisieren
+- Du kannst alle Designaufgaben mit direktem CSS in den Components lösen. Entweder direkt im HTML (`style:{{"background-color":"green"}}`) oder über CSS-Klassen – für uns ist erst mal beides okay.
 
 ## Projekt starten
 
