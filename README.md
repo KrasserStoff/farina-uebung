@@ -14,7 +14,7 @@ Folgende Eigenschaften sollten erfüllt sein:
 4. Beachte die korrekte Reihenfolge der News
 5. Achte auf angemessenes Ladefeedback für die User
 
-Als Hilfestellung, sind die Aufgaben mit `TODO: ` in Kommentaren hinterlegt.
+Als Hilfestellung, sind die meisten Aufgaben mit `TODO: ` in Kommentaren hinterlegt.
 
 Pushe deine finale Lösung in GitHub
 
