@@ -1,20 +1,23 @@
 {
-  "name": "typescript-react-test",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "14.0.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.3.3",
-    "@types/react": "^18.2.45",
-    "@types/node": "^20.10.5"
-  }
+	"name": "typescript-react-test",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start"
+	},
+	"dependencies": {
+		"@apollo/client": "^4.0.9",
+		"cross-fetch": "^4.1.0",
+		"graphql": "^16.12.0",
+		"next": "15.2.4",
+		"react": "19.0.0",
+		"react-dom": "19.0.0"
+	},
+	"devDependencies": {
+		"@types/node": "^20.10.5",
+		"@types/react": "^18.2.45",
+		"typescript": "^5.3.3"
+	}
 }

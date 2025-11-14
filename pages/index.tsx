@@ -1,19 +1,25 @@
-import { useState } from "react";
-import MessageForm from "../components/MessageForm";
+import { useEffect, useState } from "react";
+import { fetchNews } from "../components/functions";
+import NewsForm, { type News } from "../components/NewsForm";
 
 export default function Home() {
-  const [response, setResponse] = useState<string>("");
+	const [news, setNews] = useState<Array<News> | undefined>(undefined);
 
-  return (
-    <main style={{ padding: "2rem", fontFamily: "sans-serif" }}>
-      <h1>React + TypeScript + Next.js Test</h1>
-      <p>Enter a message below and submit to the server:</p>
-      <MessageForm onResponse={setResponse} />
-      {response && (
-        <div style={{ marginTop: "1rem", color: "green" }}>
-          <strong>Server Response:</strong> {response}
-        </div>
-      )}
-    </main>
-  );
+	useEffect(() => {
+		// Fetches news data from the server and updates the state
+		fetchNews().then((data) => {
+			console.log(data);
+			setNews(data.news);
+		});
+	}, []);
+
+	// TODO: Loading info when news is undefined
+
+	return (
+		// TODO: Display the krasserstoff.com logo and use a more appropriate font
+		<main>
+			<h1>krasserstoff.com x Farina</h1>
+			<NewsForm news={news} />
+		</main>
+	);
 }

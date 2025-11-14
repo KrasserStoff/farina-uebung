@@ -1,20 +1,42 @@
-# React + TypeScript + Next.js Test
+# Farina x krasserstoff.com Übung
 
-## Task
+## Aufgabe
 
-1. Complete the `MessageForm` component:
-   - Use `useRef` to read input value.
-   - Use `fetch` to POST the message to `/api/process`.
-   - Display the server's response (using the `onResponse` callback).
+Die grundsätzliche Aufgabe ist das Erstellen von einem Formular, in dem man aus einer Liste von News eine auswählen kann und dann die News angezeigt bekommt.
 
-2. Bonus:
-   - Add error handling.
-   - Disable the button while loading.
-   - Clear the input after successful submission.
+Du solltest dafür vor allem folgende Dateien bearbeiten: `NewsForm.tsx` und `index.tsx`.
 
-## Run the project
-```bash
-npm install
-npm run dev
-```
-The app should be available at http://localhost:3000
+Folgende Eigenschaften sollten erfüllt sein:
+
+1. <select> mit einer Liste aus News. Dafür ist `NewsForm.tsx` bereits erstellt und erhält einen Array von News, der von unserer API kommt. Die Typisierung für die Felder der News ist vorhanden.
+2. Beim Auswählen eines Elements sollte sich ein <img> Element verändern.
+3. Beim Klick auf Bild soll sich das `href` der News in einem neuen Tab öffnen.
+4. Beachte die korrekte Reihenfolge der News
+5. Achte auf angemessenes Ladefeedback für die User
+
+Als Hilfestellung, sind die Aufgaben mit `TODO: ` in Kommentaren hinterlegt.
+
+Pushe deine finale Lösung in GitHub
+
+### Bonus
+
+- Passe die Schriftart an krasserstoff.com an
+- Passe das Layout in `index.tsx` ein bisschen mehr an krasserstoff.com an
+- Zeige das Logo von krasserstoff.com an
+- Zeige Titel und Text der News an
+- Achte darauf, dass keine Typescript-Fehler vorhanden sind
+- Pass das Design weiter nach Belieben an und achte darauf, dass es auch auf Smartphones gut aussieht
+- Kommentiere wichtige Stellen im Code
+
+### Hints
+
+- Nutze `useState()` um die Daten zu aktualisieren
+
+## Projekt starten
+
+Um das Projekt zu installieren und zu starten, führe diese Kommandos aus
+
+- `npm install`
+- `npm run dev`
+
+Die App sollte dann unter http://localhost:3000 erreichbar sein

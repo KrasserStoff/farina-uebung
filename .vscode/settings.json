@@ -1,0 +1,28 @@
+{
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"typescript.enablePromptUseWorkspaceTsdk": true,
+	// prevent auto importing graphql from "graphql" package instead of "@/gql-generated"
+	"typescript.preferences.autoImportFileExcludePatterns": ["graphql"],
+	"typescript.preferences.preferTypeOnlyAutoImports": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[yaml]": {
+		"editor.tabSize": 4
+	},
+	"tailwindCSS.experimental.classRegex": [
+		["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+		["\\S*classOverrides\\S*\\: \\{([\\s\\S]+?)(?=}[\\s;,.])", ":\\s*\\\"(.*?)\\\""],
+		"twx\\.[^`]+`([^`]*)`",
+		"twx\\(.*?\\).*?`([^`]*)",
+		["twx\\.[^`]+\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+		["twx\\(.*?\\).*?\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+	],
+	"eslint.validate": ["javascript", "javascriptreact", "json", "typescript", "typescriptreact"],
+	"eslint.rules.customizations": [
+		{ "rule": "*", "severity": "warn" },
+		{ "rule": "@graphql-eslint/fields-on-correct-type", "severity": "error" }
+	],
+	"autoRestart.fileGlobForTypescript": ["**/gql-generated/gql.ts"],
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
+}
