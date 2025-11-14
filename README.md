@@ -9,7 +9,7 @@ Du solltest dafür vor allem folgende Dateien bearbeiten: `NewsForm.tsx` und `in
 Folgende Eigenschaften sollten erfüllt sein:
 
 1. `<select>` mit einer Liste aus News. Dafür ist `NewsForm.tsx` bereits erstellt und erhält einen Array von News, der von unserer API kommt. Die Typisierung für die Felder der News ist vorhanden.
-2. Beim Auswählen eines Elements sollte sich ein <img> Element verändern.
+2. Beim Auswählen eines Elements sollte sich ein `<img>` Element verändern.
 3. Beim Klick auf Bild soll sich das `href` der News in einem neuen Tab öffnen.
 4. Beachte die korrekte Reihenfolge der News
 5. Achte auf angemessenes Ladefeedback für die User
