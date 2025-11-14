@@ -9,16 +9,23 @@ export default function Home() {
 		// Fetches news data from the server and updates the state
 		fetchNews().then((data) => {
 			console.log(data);
-			setNews(data.news);
+			// State aktualisieren → NewsForm wird gerendert aber von data.news zu data geändert keine ideale lösung
+			setNews(data);
 		});
 	}, []);
 
-	// TODO: Loading info when news is undefined
+	// Loading info when news is undefined
+	if (!news) {
+		return <p>Lade News...</p>;
+
+	}
 
 	return (
-		// TODO: Display the krasserstoff.com logo and use a more appropriate font
-		<main>
-			<h1>krasserstoff.com x Farina</h1>
+		// TODO: Display the krasserstoff.com logo
+		<main style={{
+			fontFamily: '"Instrument Sans", "Instrument Sans Fallback", sans-serif',
+			maxWidth: "80%", margin: "0 auto", padding: "2rem"}}>
+			<h1  style={{ textAlign: "center" }}>krasserstoff.com x Farina</h1>
 			<NewsForm news={news} />
 		</main>
 	);
